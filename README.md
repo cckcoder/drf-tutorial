@@ -11,3 +11,9 @@
 
 * Install Django `pip install django`
 * Install Django RESTFramework `pip install djangorestframework`
+
+## Project Setup.
+
+Create a project name mysite with this command.
+
+`django-admin startproject mysite .`
