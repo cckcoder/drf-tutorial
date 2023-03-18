@@ -17,3 +17,7 @@
 Create a project name mysite with this command.
 
 `django-admin startproject mysite .`
+
+Create an app with this command.
+
+`django-admin startapp api`

@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # Config DRF to DJ.
+    "rest_framework",
+    # Config our app here.
+    "api",
 ]
 
 MIDDLEWARE = [
