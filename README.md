@@ -27,5 +27,9 @@ Create an app with this command.
 * First need to makemigrations to get migrate file `python manage.py makemigrations`
 * Then migrate the model to DB with command `python manage.py migrate`
 
+## Django Admin.
 
+> Create Super user.
+
+`python manage.py createsuperuser`
 
