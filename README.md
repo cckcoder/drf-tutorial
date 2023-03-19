@@ -21,3 +21,9 @@ Create a project name mysite with this command.
 Create an app with this command.
 
 `django-admin startapp api`
+
+## Makemigration and Migrate.
+
+`python manage.py makemigrations`
+
+
