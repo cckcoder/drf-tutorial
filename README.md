@@ -24,6 +24,8 @@ Create an app with this command.
 
 ## Makemigration and Migrate.
 
-`python manage.py makemigrations`
+* First need to makemigrations to get migrate file `python manage.py makemigrations`
+* Then migrate the model to DB with command `python manage.py migrate`
+
 
 
