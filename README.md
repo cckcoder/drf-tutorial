@@ -33,3 +33,10 @@ Create an app with this command.
 
 `python manage.py createsuperuser`
 
+## Test
+
+Create a test case example on `test.py` under the application.
+
+Execute with this command
+
+`python manage.py test`
