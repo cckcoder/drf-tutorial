@@ -33,6 +33,14 @@ Create an app with this command.
 
 `python manage.py createsuperuser`
 
+## CORS
+
+Install the library `django-cors-headers`
+
+* [Repo](https://github.com/adamchainz/django-cors-headers)
+
+`python -m pip install django-cors-headers`
+
 ## Test
 
 Create a test case example on `test.py` under the application.
