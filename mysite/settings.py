@@ -15,10 +15,11 @@ SECRET_KEY = "django-insecure-7!lyu8#1bn&v400ra3h085x*g+ybd$4cgz9@-szvdb7soi-oq0
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
 # CORS
-CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ["*"]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -51,9 +52,15 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware"
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
+
+CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 ROOT_URLCONF = "mysite.urls"
 
@@ -79,13 +86,19 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+#DATABASES = {
+        #"default": {
+            #"ENGINE": "django.db.backends.sqlite3",
+            #"NAME": BASE_DIR / "db.sqlite3",
+            #}
+        #}
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-         'NAME': 'task',
-        'USER': 'mr_task',
-        'PASSWORD': ']@bI]P/;x0LI',
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'task',
+            'USER': 'mr_task',
+            'PASSWORD': ']@bI]P/;x0LI',
         'HOST': 'pg_task_db',
         'PORT': 5432,
     }
