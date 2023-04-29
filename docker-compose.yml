@@ -1,0 +1,44 @@
+version: '3'
+
+networks:
+  codewizz-education:
+    external: true
+
+services:
+  pg_task_db:
+    image: postgres:14
+    container_name: pg_task_db
+    restart: always
+    environment:
+      - POSTGRES_USER=mr_task
+      - POSTGRES_DB=task
+      - POSTGRES_PASSWORD=]@bI]P/;x0LI
+    ports:
+      - 5432:5432
+    deploy:
+      resources:
+        limits:
+          cpus: 0.5 
+          memory: 512M
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    networks:
+      - codewizz-education
+
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --no-input &&
+             gunicorn mysite.wsgi:application --bind 0.0.0.0:8000 --log-level debug --workers 4"
+    ports:
+      - 8009:8000
+    depends_on:
+      - pg_task_db
+    deploy:
+      resources:
+        limits:
+          cpus: 0.5 
+          memory: 128M
+    networks:
+      - codewizz-education
