@@ -56,6 +56,10 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'ALLOWED_METHODS': ('GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS')
 }
 
 CSRF_COOKIE_HTTPONLY = False
