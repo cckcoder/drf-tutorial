@@ -55,5 +55,8 @@ Execute with this command
 * Then stop the server and run `python manage.py migrate`
 * After that run server again `python manage.py runserver`
 
+### Ref
 
+* [DRF token official](https://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication)
+* [dj_rest_auth](https://github.com/iMerica/dj-rest-auth)
 
