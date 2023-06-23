@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Config DRF to DJ.
     "rest_framework",
+    "rest_framework.authtoken",
     # Config our app here.
     "api",
 
