@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # Config DRF to DJ.
     "rest_framework",
     "rest_framework.authtoken",
+    "dj_rest_auth",
+
     # Config our app here.
     "api",
 
@@ -118,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated"
+        "rest_framework.permissions.IsAuthenticated",
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
