@@ -50,3 +50,10 @@ Execute with this command
 `python manage.py test`
 
 ## JSON Web Tokens (JWTs)
+
+* Add build-in auth by install app `rest_framework.authtoken` to project.
+* Then stop the server and run `python manage.py migrate`
+* After that run server again `python manage.py runserver`
+
+
+
