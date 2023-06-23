@@ -3,7 +3,7 @@ from .models import Task
 from .serializers import TaskSerializer
 
 
-class TaskApiView(generics.ListAPIView):
+class TaskApiView(generics.ListCreateAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
