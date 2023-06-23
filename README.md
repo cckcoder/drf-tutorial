@@ -48,3 +48,5 @@ Create a test case example on `test.py` under the application.
 Execute with this command
 
 `python manage.py test`
+
+## JSON Web Tokens (JWTs)
